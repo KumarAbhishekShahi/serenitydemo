@@ -23,8 +23,8 @@ jobs:
       - name: Convert to PDF
         uses: fifsky/html-to-pdf-action@master
         with:
-          htmlFile: /home/runner/work/serenitydemo/serenitydemo/target/site/serenity/index.html
-          outputFile: /home/runner/work/serenitydemo/serenitydemo/target/site/serenity/testreport.pdf
+          htmlFile: ./target/site/serenity/index.html
+          outputFile: ./target/site/serenity/testreport.pdf
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - name: Upload Test PDF
