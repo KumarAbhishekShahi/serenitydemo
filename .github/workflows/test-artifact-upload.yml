@@ -3,7 +3,7 @@ on:
 
 name: JIRA Cloud Using Curl
 
-jobs:
+jobs: 
   my-job:
     name: My Job
     runs-on: ubuntu-latest
