@@ -28,7 +28,7 @@ jobs:
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
       - name: Upload Test PDF
-          uses: actions/upload-artifact@v2
-          with:
-            name: test-report-pdf
-            path: /home/runner/work/serenitydemo/serenitydemo/testreport.pdf
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-report-pdf
+          path: /home/runner/work/serenitydemo/serenitydemo/testreport.pdf
