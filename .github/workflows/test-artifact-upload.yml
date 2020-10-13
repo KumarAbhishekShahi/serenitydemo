@@ -19,3 +19,16 @@ jobs:
         with:
           name: test-report
           path: /home/runner/work/serenitydemo/serenitydemo/target/site
+
+      - name: Convert to PDF
+        uses: fifsky/html-to-pdf-action@master
+        with:
+          htmlFile: /home/runner/work/serenitydemo/serenitydemo/target/site
+          outputFile: /home/runner/work/serenitydemo/serenitydemo/testreport.pdf
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
+
+      - name: Upload Test PDF
+          uses: actions/upload-artifact@v2
+          with:
+            name: test-report-pdf
+            path: /home/runner/work/serenitydemo/serenitydemo/testreport.pdf
