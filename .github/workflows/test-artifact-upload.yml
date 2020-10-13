@@ -18,7 +18,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test-report
-          path: /home/runner/work/serenitydemo/serenitydemo/target/site
+          path: /home/runner/work/serenitydemo/serenitydemo/target/site/serenity/index.html
 
       - name: Convert to PDF
         uses: fifsky/html-to-pdf-action@master
@@ -31,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test-report-pdf
-          path: /home/runner/work/serenitydemo/serenitydemo/testreport.pdf
+          path: /home/runner/work/serenitydemo/serenitydemo/target/site/serenity/testreport.pdf
