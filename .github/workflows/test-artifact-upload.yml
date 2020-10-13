@@ -19,13 +19,11 @@ jobs:
       - name: Run Serenity Test
         run: mvn test verify
 
-      - run: echo "WORKSPACE IS - " ${GITHUB_WORKSPACE}
-
       - name: Upload Test Report
         uses: actions/upload-artifact@v2
         with:
           name: test-report
-          path: ${GITHUB_WORKSPACE}/${{ env.TEST_REPORT_HTML_PATH }}
+          path: ${{ github.workspace }}/${{ env.TEST_REPORT_HTML_PATH }}
 
       - name: Convert to PDF
         uses: fifsky/html-to-pdf-action@master
@@ -40,4 +38,4 @@ jobs:
         if: ${{ env.IS_REPORT_HTML }}
         with:
           name: test-report-pdf
-          path: ${GITHUB_WORKSPACE}/${{ env.TEST_REPORT_PDF_PATH }}
+          path: ${{ github.workspace }}/${{ env.TEST_REPORT_PDF_PATH }}
