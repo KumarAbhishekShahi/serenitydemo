@@ -18,7 +18,9 @@ jobs:
       
       - name: Run Serenity Test
         run: mvn test verify
-      
+
+      - run: echo "WORKSPACE IS - " ${GITHUB_WORKSPACE}
+
       - name: Upload Test Report
         uses: actions/upload-artifact@v2
         with:
