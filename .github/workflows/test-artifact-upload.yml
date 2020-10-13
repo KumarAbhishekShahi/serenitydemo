@@ -29,7 +29,7 @@ jobs:
         uses: fifsky/html-to-pdf-action@master
         if: ${{ env.IS_REPORT_HTML }}
         with:
-          htmlFile: ./${{ TEST_REPORT_HTML_PATH }}
+          htmlFile: ./${{ env.TEST_REPORT_HTML_PATH }}
           outputFile: ./${{ env.TEST_REPORT_PDF_PATH }}
           pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "10mm", "right": "10mm", "bottom": "10mm"}}'
 
